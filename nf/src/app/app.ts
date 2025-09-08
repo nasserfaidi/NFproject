@@ -12,7 +12,7 @@ import { Footer } from './footer/footer';
   standalone: true,
   imports: [Sidebar, Searchbar, Table, Footer, CommonModule],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.scss'
 })
 export class AppComponent {
   filterText: string = '';

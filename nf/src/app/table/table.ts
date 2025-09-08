@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common'
   standalone:true,
   imports: [CommonModule],
   templateUrl: './table.html',
-  styleUrls: ['./table.css']
+  styleUrls: ['./table.scss']
 })
 export class Table {
 @Input() filterText: string = '';

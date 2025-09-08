@@ -7,7 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   imports: [CommonModule , FormsModule],
   standalone: true,
   templateUrl: './searchbar.html',
-  styleUrl: './searchbar.css'
+  styleUrl: './searchbar.scss'
 })
 export class Searchbar {
 searchText: string = '';
