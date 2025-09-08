@@ -10,7 +10,7 @@
         </div> <br>
        <app-searchbar (searchChanged)="onSearchChanged($event)"></app-searchbar>
         <div class="table-wrapper">
-            <app-table [Employees]="Employees" [filterText]="filterText"></app-table>
+            <app-table [employees]="employees" [filterText]="filterText"></app-table>
             <div class="more">
                 <button class="more-button">More</button>
             </div>

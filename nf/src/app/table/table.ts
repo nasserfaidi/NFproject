@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common'
 })
 export class Table {
 @Input() filterText: string = '';
-@Input() Employees: any[] = [];
+@Input() employees: any[] = [];
 get filteredEmployees() {
-  return this.Employees.filter(c => c.name.toLowerCase().includes(this.filterText.toLowerCase()) ||
+  return this.employees.filter(c => c.name.toLowerCase().includes(this.filterText.toLowerCase()) ||
   c.email.toLowerCase().includes(this.filterText.toLowerCase()) || c.mobile.includes(this.filterText)
   );
 }
