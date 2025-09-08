@@ -64,6 +64,11 @@
     cursor: pointer;
 }
 
+table i {
+    cursor: pointer;
+    color:rgba(0, 0, 0, 0.705);
+}
+
 .table-row>td:last-child.active {
     color: green;
     font-weight: bold;

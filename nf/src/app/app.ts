@@ -47,7 +47,7 @@ export class AppComponent {
     });
   };
 
-  Employees = [
+  employees = [
     { name: 'Majd Mohanad ', position: 'Frontend Intern', email: 'majdmohanad@gmail.com', mobile: '+962792345678', status: 'Active' },
     { name: 'Mohamad Tamer', position: 'Angular Developer', email: 'ssmohamad@gmail.com', mobile: '+962787654321', status: 'Inactive' },
     { name: 'Layla Hussein', position: 'UI/UX Designer', email: 'layla@gmail.com', mobile: '+962755556666', status: 'Active' },
