@@ -1,0 +1,139 @@
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.head-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.profile {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #00a86b;
+    font-weight: 800px;
+}
+
+.profile:hover {
+    text-decoration: underline;
+    color: #00a86b;
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+
+.user-icon {
+    vertical-align: middle;
+    font-size: 17px;
+    color: #00a86b;
+}
+
+.lang {
+    cursor: pointer;
+    padding: 10px 10px;
+    font-size: 12px;
+    background-color: white;
+    color: black;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.258);
+}
+
+.more {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.more-button {
+    padding: 10px 24px;
+    background-color: #00a86b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.more-button:hover {
+    background-color: #025335;
+    color: white;
+}
+
+@media (max-width: 480px) {
+
+    body {
+        max-width: 100px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .head-line {
+        margin-top: 10px;
+        gap: 375px;
+        height: 60px;
+        padding: 0 8px;
+        font-size: 12px;
+    }
+
+    .profile {
+        min-width: 100px;
+        max-height: 30px;
+    }
+
+    .lang {
+        min-width: 100px;
+        max-height: 30px;
+        padding: 10px 5px;
+        font-size: 10px;
+    }
+
+
+
+    main {
+        min-width: fit-content;
+        margin-left: 0;
+        padding: 10px 5px;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .sidebar ul {
+        gap: 15px;
+    }
+
+    .sidebar a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .head-line {
+
+        height: 55px;
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    main {
+        padding: 15px 10px;
+    }
+
+    .employee-table {
+        font-size: 14px;
+    }
+
+
+}

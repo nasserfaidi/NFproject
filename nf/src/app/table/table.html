@@ -1,0 +1,20 @@
+<table class="employee-table">
+                    <thead class="table-header">
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr *ngFor="let employee of filteredEmployees" class="table-row">
+                                <td class="empname"> <div class="avatar" [attr.data-name]="employee.name"></div> {{ employee.name }}</td>
+                                <td>{{ employee.position }}</td>
+                                <td>{{ employee.email }}</td>
+                                <td>{{ employee.mobile }}</td>
+                                <td [ngClass]="employee.status === 'Active' ? 'is-active' :'is-not-active'">{{ employee.status }}</td>
+                            </tr>
+                    </tbody>
+                </table>

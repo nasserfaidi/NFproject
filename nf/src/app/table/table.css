@@ -1,0 +1,99 @@
+.employee-table {
+    direction: ltr;
+    width: 100%;
+    border-collapse:separate;
+    border-radius: 10px;
+    table-layout:auto; 
+    display: table;
+    margin: 20px 0;
+    font-family: arial , sans-serif;
+    border: 1px solid #ccc;
+    
+}
+
+.table-header {
+    font-weight: bold;
+    color: #00a86b;
+    text-transform: uppercase;
+}
+
+.table-header th {
+    padding: 15px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.employee-table td {
+    padding: 12px 10px;
+    border-right: 1px solid #cccccc59;
+        border-bottom: 1px solid #cccccc59;
+
+}
+
+
+.empname {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 8px;
+    border-right: 1px solid #eee
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    text-transform:uppercase;
+}
+.employee-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-row>td:last-child {
+    border-right: none;
+}
+
+.table-row:hover>td {
+    background-color: #e6f5ec;
+    cursor: pointer;
+}
+
+.table-row>td:last-child.active {
+    color: green;
+    font-weight: bold;
+}
+
+.table-row>td:last-child.inactive {
+    color: red;
+    font-weight: bold;
+}
+
+.is-active {
+    color: green;
+}
+
+.is-not-active {
+    color: red;
+}
+th , td{
+    text-align: left;
+    padding: 5px 10px;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+width:auto;
+white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+.employee-table {
+        min-width: fit-content;
+        font-size: 12px;
+    }
+}

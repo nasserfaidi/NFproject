@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    
+    <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="NF.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>solid range</title>
+</head>
+
+<body>
+    <script src="NF.js"></script>
+    <div class="container">
+        <nav class="sidebar">
+            <p class="logo">SOLIDRANGE</p>
+            <br>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a class="active" href="#">Employees</a></li>
+                <li><a href="#">Applications</a></li>
+                <li><a href="#">Internships</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a class="logout" href="#">
+                        <i class="fa-solid fa-right-from-bracket icon logout-icon"></i><button class="logout-btn">Log
+                            Out</button></a> </li>
+            </ul>
+        </nav>
+        <main class="mainpage">
+            <div class="head-line">
+                <div class="profile">
+                    <i class="fa-solid fa-user user-icon"></i>
+                    <p>Nasser Faidi</p>
+                </div>
+                <button class="lang" onclick="toggleDir()">change language</button>
+            </div> <br>
+            <h2 class="section-title">EMPLOYEES</h2>
+            <div class="manage-table">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search employee here..." />
+                </div>
+                <div class="control-table">
+                    <button class="filter-btn"><i class="fas fa-filter"></i></button>
+                    <button class="view-toggle-btn"><i class="fas fa-th-large"></i></button>
+                    <button class="edit">edit</button>
+                    <button class="add">Add new employee</button>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table class="employee-table">
+                    <thead class="table-header">
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row">
+                            <td class="empname">
+                                <div class="avatar" data-name="Majd Mohanad"></div> Majd Mohanad
+                            </td>
+                            <td>Frontend Intern</td>
+                            <td>majdmohanad@gmail.com</td>
+                            <td>+962792345678</td>
+                            <td class="is-active">Active</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="empname">
+                                <div class="avatar" data-name="Mohamad Tamer"></div> Mohamad Tamer
+                            </td>
+                            <td>Angular Developer</td>
+                            <td>ssmohamad@gmail.com</td>
+                            <td>+962787654321</td>
+                            <td class="is-not-active">Inactive</td>
+                        </tr>
+
+                        <tr class="table-row">
+                            <td class="empname">
+                                <div class="avatar" data-name="layla hussein"></div> Layla Hussein
+                            </td>
+                            <td>UI/UX Designer</td>
+                            <td>layla@gmail.com</td>
+                            <td>+962755556666</td>
+                            <td class="is-active">Active</td>
+                        </tr>
+
+                        <tr class="table-row">
+                            <td class="empname">
+                                <div class="avatar" data-name="salem omar"></div> Salem Omar
+                            </td>
+                            <td>Data Analyst Intern</td>
+                            <td>salem2233@gmail.com</td>
+                            <td>+962791444333</td>
+                            <td class="is-active">Active</td>
+                        </tr>
+
+                        <tr class="table-row">
+                            <td class="empname">
+                                <div class="avatar" data-name="noor majed"></div>Noor Majed
+                            </td>
+                            <td>Backend Intern</td>
+                            <td>noor2001@gmail.com</td>
+                            <td>+962722221111</td>
+                            <td class="is-not-active">Inactive</td>
+                        </tr>
+
+                        <tr class="table-row">
+                            <td class="empname">
+                                <div class="avatar" data-name="ahmad emad"></div>Ahmad Emad
+                            </td>
+                            <td>Frontend Intern</td>
+                            <td>ahmad2003@gmail.com</td>
+                            <td>+962777778888</td>
+                            <td class="is-active">Active</td>
+                        </tr>
+
+                        <tr class="table-row">
+                            <td class="empname">
+                                <div class="avatar" data-name="aya ismail"></div>Aya ismail
+                            </td>
+                            <td>Data analyst</td>
+                            <td>aya9911@gmail.com</td>
+                            <td>+962792918218</td>
+                            <td class="is-not-active">Inactive</td>
+                        </tr>
+
+                        <tr class="table-row">
+                            <td class="empname">
+                                <div class="avatar" data-name="hasan muntaser"></div>Hasan muntaser
+                            </td>
+                            <td>Quality assurance</td>
+                            <td>hasan87hasan@gmail.com</td>
+                            <td>+962771012991</td>
+                            <td class="is-not-active">Inactive</td>
+                        </tr>
+
+                        <tr class="table-row">
+                            <td class="empname">
+                                <div class="avatar" data-name="layan fadel"></div>Layan fadel
+                            </td>
+                            <td>Frontend Developer</td>
+                            <td>layanss21@gmail.com</td>
+                            <td>+962777121886</td>
+                            <td class="is-not-active">Inactive</td>
+                            </tr>
+                    </tbody>
+                    <table>
+
+                        <div class="more">
+                            <button class="more-button">More</button>
+                        </div>
+                        <p class="footer">&copy; 2025 solidrange. All rights reserved.</p>
+
+            </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

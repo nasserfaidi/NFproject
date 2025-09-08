@@ -1,0 +1,12 @@
+<h2 class="section-title">EMPLOYEES</h2>
+<div class="manage-table">
+            <div class="search-bar">
+                               <input type="text" [(ngModel)]="searchText" (ngModelChange)="onSearchChange()" placeholder="Search employee here..." />
+                           </div>
+            <div class="control-table">
+                <button class="filter-btn"><i class="fas fa-filter"></i></button>
+                <button class="view-toggle-btn"><i class="fas fa-th-large"></i></button>
+                <button class="edit">edit</button>
+                <button class="add">Add new employee</button>
+            </div>
+        </div>
