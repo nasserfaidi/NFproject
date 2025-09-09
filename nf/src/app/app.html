@@ -1,20 +1,18 @@
-<div class="container">
-    <app-sidebar></app-sidebar>
-    <main class="mainpage">
-        <div class="head-line">
-            <div class="profile">
-                <i class="fa-solid fa-user user-icon"></i>
-                <p>Nasser Faidi</p>
+<div class="layout">
+    <div class="container">
+        <app-sidebar></app-sidebar>
+        <main class="mainpage">
+            <div class="head-line">
+                <div class="profile">
+                    <i class="fa-solid fa-user user-icon"></i>
+                    <p>Nasser Faidi</p>
+                </div>
+                <button class="lang" (click)="changeLanguage()">Change Language</button>
+            </div> <br>
+            <div class="content">
+<router-outlet></router-outlet>
             </div>
-            <button class="lang" (click)="changeLanguage()">Change Language</button>
-        </div> <br>
-       <app-searchbar (searchChanged)="onSearchChanged($event)"></app-searchbar>
-        <div class="table-wrapper">
-            <app-table [employees]="employees" [filterText]="filterText"></app-table>
-            <div class="more">
-                <button class="more-button">More</button>
-            </div>
-            <app-footer></app-footer>
-        </div>
-    </main>
+                <app-footer></app-footer>
+        </main>
+    </div>
 </div>
