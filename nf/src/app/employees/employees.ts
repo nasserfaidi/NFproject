@@ -5,6 +5,7 @@ import { Searchbar } from '../searchbar/searchbar';
 
 @Component({
   selector: 'app-employees',
+  standalone: true,
   imports: [CommonModule , Table , Searchbar],
   templateUrl: './employees.html',
   styleUrl: './employees.css'
@@ -29,4 +30,10 @@ filterText: string = '';
 onSearchChanged(searchValue: string) {
   this.filterText = searchValue;
 }
+  isGrid = false;
+
+onViewChanged(grid: boolean) {
+  this.isGrid = grid;
+}
+
 }

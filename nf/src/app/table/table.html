@@ -1,4 +1,4 @@
-<table class="employee-table">
+<table *ngIf="!isGrid" class="employee-table">
                     <thead class="table-header">
                         <tr>
                             <th>Name</th>
@@ -20,3 +20,14 @@
                             </tr>
                     </tbody>
                 </table>
+
+                <div *ngIf="isGrid" class="grid-container">
+                    <div class="grid-item" *ngfor="let employee of employees"></div>
+                     <td class="empname"> <div class="avatar" [attr.data-name]="employee.name"></div> {{ employee.name }}</td>
+                                <td>{{ employee.position }}</td>
+                                <td>{{ employee.email }}</td>
+                                <td>{{ employee.mobile }}</td>
+                                <td [ngClass]="employee.status === 'Active' ? 'is-active' :'is-not-active'">{{ employee.status }}</td>
+                                <td><i class="fas fa-edit" title="edit"></i></td>
+                                <td><i class="fas fa-trash" title="delete"></i></td>
+                </div>

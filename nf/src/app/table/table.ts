@@ -20,8 +20,10 @@ export class Table {
     { name: 'Hasan Muntaser', position: 'Quality Assurance', email: 'hasan87hasan@gmail.com', mobile: '+962799927175', status: 'Active' },
     { name: 'Layla Fadel', position: 'Frontend Developer', email: 'layan21@gmail.com', mobile: '+962781843401', status: 'Inactive' }
   ];
+
 @Input() filterText: string = '';
 @Input() Employees: any[] = [];
+@Input() isGrid=false;
 get filteredEmployees() {
   return this.employees.filter(c => c.name.toLowerCase().includes(this.filterText.toLowerCase()) ||
   c.email.toLowerCase().includes(this.filterText.toLowerCase()) || c.mobile.includes(this.filterText)

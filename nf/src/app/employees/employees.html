@@ -1,6 +1,6 @@
-                <app-searchbar (searchChanged)="onSearchChanged($event)"></app-searchbar>
+                <app-searchbar (searchChanged)="onSearchChanged($event)" (viewChanged)="onViewChanged($event)"></app-searchbar>
                 <div class="table-wrapper">
-                    <app-table [filterText]="filterText"></app-table>
+                    <app-table [filterText]="filterText" [isGrid]="isGrid"></app-table>
                     
                     <div class="more">
                         <button class="more-button">More</button>

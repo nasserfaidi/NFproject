@@ -7,6 +7,5 @@ import { Applications } from './applications/applications';
 export const routes: Routes = [
     {path: 'employees', component: Employees} ,
     {path: 'internships', component: Internships} ,
-    {path: 'applications', component: Applications} ,
-    {path: '', redirectTo: '/employees' , pathMatch: 'full'}
+    {path: 'applications', component: Applications} 
 ];
