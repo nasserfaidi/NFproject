@@ -11,16 +11,20 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class Searchbar {
 searchText: string = '';
-@Output() searchChanged = new EventEmitter<string>();
-@Output() viewChanged = new EventEmitter<boolean>();
-  isGrid = false;
+@Output() searchTermChange = new EventEmitter<string>();
+@Output() toggleGrid = new EventEmitter<boolean>();
 
-toggleView() {
-  this.isGrid = !this.isGrid;
-  this.viewChanged.emit(this.isGrid);
+isGrid: boolean = false;
+
+onSearchChanged(event : Event) {
+const input = event.target as HTMLInputElement;
+this.searchTermChange.emit(input.value);
 }
 
-onSearchChange() {
-  this.searchChanged.emit(this.searchText);
+
+
+onToggleGrid() {
+  this.isGrid = !this.isGrid;
+  this.toggleGrid.emit(this.isGrid);
 }
 }

@@ -1,6 +1,8 @@
-                <app-searchbar (searchChanged)="onSearchChanged($event)" (viewChanged)="onViewChanged($event)"></app-searchbar>
+                <app-searchbar (searchTermChange)="onSearch($event)"
+                (toggleGrid)="onToggleGrid($event)"></app-searchbar>
+                
                 <div class="table-wrapper">
-                    <app-table [filterText]="filterText" [isGrid]="isGrid"></app-table>
+                    <app-table [employees]="employeesList" [filter]="searchTerm" [isGrid]="isGrid"></app-table>
                     
                     <div class="more">
                         <button class="more-button">More</button>

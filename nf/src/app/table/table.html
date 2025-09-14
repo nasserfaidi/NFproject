@@ -1,33 +1,54 @@
-<table *ngIf="!isGrid" class="employee-table">
-                    <thead class="table-header">
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Email</th>
-                            <th>Mobile</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                            <tr *ngFor="let employee of filteredEmployees" class="table-row">
-                                <td class="empname"> <div class="avatar" [attr.data-name]="employee.name"></div> {{ employee.name }}</td>
-                                <td>{{ employee.position }}</td>
-                                <td>{{ employee.email }}</td>
-                                <td>{{ employee.mobile }}</td>
-                                <td [ngClass]="employee.status === 'Active' ? 'is-active' :'is-not-active'">{{ employee.status }}</td>
-                                <td><i class="fas fa-edit" title="edit"></i></td>
-                                <td><i class="fas fa-trash" title="delete"></i></td>
-                            </tr>
-                    </tbody>
-                </table>
-
-                <div *ngIf="isGrid" class="grid-container">
-                    <div class="grid-item" *ngfor="let employee of employees"></div>
-                     <td class="empname"> <div class="avatar" [attr.data-name]="employee.name"></div> {{ employee.name }}</td>
-                                <td>{{ employee.position }}</td>
-                                <td>{{ employee.email }}</td>
-                                <td>{{ employee.mobile }}</td>
-                                <td [ngClass]="employee.status === 'Active' ? 'is-active' :'is-not-active'">{{ employee.status }}</td>
-                                <td><i class="fas fa-edit" title="edit"></i></td>
-                                <td><i class="fas fa-trash" title="delete"></i></td>
+<div *ngIf="isGrid; else tableView" class="grid-container">
+    <div *ngFor="let employee of filteredEmployees" class="grid-item">
+        <div class="avatar" [attr.data-name]="employee.name"></div>
+        <div class="grid-info">
+            <div class="left-column">
+                <p><span class="label">Name:</span><span class="value"> {{ employee.name }} </span></p>
+                <p><span class="label">Position:</span><span class="value"> {{ employee.position }} </span> </p>
+                <p><span class="label">Email:</span><span class="value"> {{ employee.email }} </span> </p>
+            </div>
+            <div class="right-column">
+                <p>
+                    <span class="label">Mobile:</span>
+                    <span class="value"> {{ employee.mobile }} </span>
+                </p>
+                <p>
+                    <span class="label">Status:</span>
+                    <span class="value" [ngClass]="employee.status === 'Active' ? 'is-active' :'is-not-active'"> {{ employee.status }}</span>
+                </p>
+                <div class="tools">
+                    <p class="tools-btns"><i class="fas fa-edit" title="edit"></i></p>
+                    <p class="tools-btns"><i class="fas fa-trash" title="delete"></i></p>
                 </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #tableView>
+    <table class="employee-table">
+        <thead class="table-header">
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of filteredEmployees" class="table-row">
+                <td class="empname">
+                    <div class="avatar" [attr.data-name]="employee.name"></div> {{ employee.name }}
+                </td>
+                <td>{{ employee.position }}</td>
+                <td>{{ employee.email }}</td>
+                <td>{{ employee.mobile }}</td>
+                <td [ngClass]="employee.status === 'Active' ? 'is-active' :'is-not-active'">{{ employee.status }}</td>
+                <td><i class="fas fa-edit" title="edit"></i></td>
+                <td><i class="fas fa-trash" title="delete"></i></td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>
