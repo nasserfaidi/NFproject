@@ -1,8 +1,7 @@
 import {  Routes } from '@angular/router';
 import { Employees } from './employees/employees';
 import { Internships } from './internships/internships';
-import { Departments } from '../departments/applications
-
+import { Departments } from './departments/departments';
 
 export const routes: Routes = [
     {path: 'employees', component: Employees} ,
