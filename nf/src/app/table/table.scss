@@ -21,16 +21,20 @@
 
 
 .tools {
+    position: absolute;
     display: flex;
     gap: 5px;
+    right: 10px;
+    bottom: 10px;
 }
 
 .tools-btns {
-        cursor: pointer;
+    cursor: pointer;
     color:rgba(0, 0, 0, 0.705);
 }
 
 .grid-item {
+    position: relative;
     font-family: arial , sans-serif;
     width:528px;
     border: 1px solid #ccc;

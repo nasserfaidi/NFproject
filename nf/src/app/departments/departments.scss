@@ -1,0 +1,53 @@
+.dep-label {
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+
+.dep {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    width: 100%;
+    gap: 7px;
+}
+
+.dep-content {
+    position: relative;
+    box-sizing: border-box;
+    width: calc(33.33% - 5px);
+    height: 120px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.39);
+    transition: transform 0.6 ease;
+}
+
+.dep-content:hover {
+    transform: translateY(-3px);
+    background-color: #e6f5ec;
+}
+
+.dep-name {
+    color: #00a86b;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.dep-description {
+    color: rgba(0, 0, 0, 0.582);
+}
+
+.dep-click {
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    color:#00a86b;
+    cursor: pointer;
+    transition: 0.3 ease;
+}
+
+.dep-click:hover {
+    transform:translateY(-3px);
+    text-decoration: underline;
+}

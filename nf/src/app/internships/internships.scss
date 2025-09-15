@@ -16,6 +16,14 @@
     font-weight: 400;
     border-radius: 7px;
     display: inline;
+    cursor: pointer;
     background-color: #00a86b;
     padding: 10px;
+    border: none;
+    transition: background-color 0.8 ease;
+}
+
+.apply:hover {
+    background-color: #023321;
+    transform: translateY(-3px);
 }
