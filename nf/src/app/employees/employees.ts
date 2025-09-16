@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { OnInit } from '@angular/core';
+import { EmpService } from '../empservice';
 import { CommonModule } from '@angular/common';
 import { Table } from '../table/table';
 import { Searchbar } from '../searchbar/searchbar';
@@ -8,49 +10,45 @@ import { Searchbar } from '../searchbar/searchbar';
   standalone: true,
   imports: [CommonModule, Table, Searchbar],
   templateUrl: './employees.html',
-  styleUrl: './employees.css'
+  styleUrl: './employees.scss'
 })
-export class Employees {
-  employeesList = [
-    { name: 'Majd Mohanad ', position: 'Frontend Intern', email: 'majdmohanad@gmail.com', mobile: '+962792345678', status: 'Active' },
-    { name: 'Mohamad Tamer', position: 'Angular Developer', email: 'ssmohamad@gmail.com', mobile: '+962787654321', status: 'Inactive' },
-    { name: 'Layla Hussein', position: 'UI/UX Designer', email: 'layla@gmail.com', mobile: '+962755556666', status: 'Active' },
-    { name: 'Salem Omar', position: 'Data Analyst Intern', email: 'salem2233@gmail.com', mobile: '+962791444333', status: 'Inactive' },
-    { name: 'Noor Majed', position: 'Backend Developer', email: 'noor2001@gmail.com', mobile: '+962772287123', status: 'Active' },
-    { name: 'Ahmad Emad', position: 'Frontend Intern', email: 'ahmad2003@gmail.com', mobile: '+962771882301', status: 'Inactive' },
-    { name: 'Aya ismail', position: 'Data Analyst', email: 'aya9911@gmail.com', mobile: '+962791211561', status: 'Inactive' },
-    { name: 'Hasan Muntaser', position: 'Quality Assurance', email: 'hasan87hasan@gmail.com', mobile: '+962799927175', status: 'Active' },
-    { name: 'Layla Fadel', position: 'Frontend Developer', email: 'layan21@gmail.com', mobile: '+962781843401', status: 'Inactive' }
-  ];
+export class Employees implements OnInit {
 
-searchTerm: string = '';
-isGrid: boolean = false;
+  searchTerm: string = '';
+  isGrid: boolean = false;
+  employeesList: any[] = [];
 
-  onSearch(value: string){
-  this.searchTerm = value;
+  constructor(private empService: EmpService) {
+  }
+  ngOnInit() : void {
+    this.employeesList = this.empService.getEmployees();
+  }
+    
+  onSearch(value: string) {
+    this.searchTerm = value;
   }
 
 
-  onToggleGrid(value:boolean) {
+  onToggleGrid(value: boolean) {
     this.isGrid = value;
   }
 
   ngAfterViewInit() {
-    const avatars =
-      document.querySelectorAll('.avatar');
+    const avatars:HTMLElement[] =Array.from(document.querySelectorAll('.avatar'));
+const colors = ['#e74c3c', '#3498db', '#f1c40f', '#2ecc71', '#9b59b6', '#e67e22'];
 
-    avatars.forEach((avatar: Element) => {
+    avatars.map((avatar: Element) => {
       const name = (avatar as HTMLElement).dataset['name'] || '';
       const parts = name.trim().split(' ');
 
-      let initials = parts[0][0];
+      let initials = parts[0][0] || '';
       if (parts.length > 1) {
         initials += parts[parts.length - 1][0];
       }
       (avatar as HTMLElement).textContent = initials.toUpperCase();
-      const colors = ['#e74c3c', '#3498db', '#f1c40f', '#2ecc71', '#9b59b6', '#e67e22'];
       const randomColor = colors[Math.floor(Math.random() * colors.length)];
       (avatar as HTMLElement).style.backgroundColor = randomColor;
+      return avatar;
     });
   };
 }

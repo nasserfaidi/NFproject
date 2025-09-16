@@ -1,3 +1,5 @@
+@use '_variables' as *;
+
 .dep-label {
     font-weight: bold;
     font-size: x-large;
@@ -19,30 +21,30 @@
     height: 120px;
     padding: 10px;
     border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.39);
+    border: 1px solid $secondary-color;
     transition: transform 0.6 ease;
 }
 
 .dep-content:hover {
     transform: translateY(-3px);
-    background-color: #e6f5ec;
+    background-color: $table-hover;
 }
 
 .dep-name {
-    color: #00a86b;
+    color: $primary-color;
     font-weight: bold;
-    font-size: x-large;
+    font-size:20px;
 }
 
 .dep-description {
-    color: rgba(0, 0, 0, 0.582);
+    color:$secondary-text;
 }
 
 .dep-click {
     position:absolute;
     bottom:10px;
     right:10px;
-    color:#00a86b;
+    color:$primary-color;
     cursor: pointer;
     transition: 0.3 ease;
 }

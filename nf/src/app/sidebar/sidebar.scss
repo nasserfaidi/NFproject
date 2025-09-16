@@ -1,5 +1,7 @@
+@use '_variables' as *;
+
 .logo {
-    color: white;
+    color: $bg-color;
     align-items: center;
     font-size: x-large;
     font-weight: bold;
@@ -11,7 +13,7 @@
     position: relative;
     height:100%;
     width: 240px;
-    background-color: #00a86b;
+    background-color: $primary-color;
 }
 
 .sidebar ul {
@@ -28,20 +30,20 @@
 .sidebar a {
     font-size: 17px;
     padding:8px 0 8px 27px;
-    color: white;
+    color: $bg-color;
     text-decoration: none;
     display: block;
 }
 
 .sidebar a.active {
-    background-color: white;
-    color: #00a86b;
+    background-color: $bg-color;
+    color: $primary-color;
     font-weight: bold;
 }
 
 .i-fas {
     font-size: 17px;
-    color: white;
+    color: $bg-color;
 }
 
 .sidebar-item {

@@ -1,3 +1,5 @@
+@use '_variables' as *;
+
 .employee-table {
     direction: ltr;
     width: 100%;
@@ -7,13 +9,13 @@
     display: table;
     margin: 20px 0;
     font-family: arial , sans-serif;
-    border: 1px solid #ccc;
+    border: 1px solid $secondary-color;
     
 }
 
 .table-header {
     font-weight: bold;
-    color: #00a86b;
+    color: $primary-color;
     text-transform: uppercase;
 }
 
@@ -25,18 +27,17 @@
 
 .employee-table td {
     padding: 12px 10px;
-    border-right: 1px solid #cccccc59;
-        border-bottom: 1px solid #cccccc59;
+    border-right: 1px solid $secondary-color;
+        border-bottom: 1px solid $secondary-color;
 
 }
-
 
 .empname {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px 8px;
-    border-right: 1px solid #eee
+    border-right: 1px solid $secondary-color;
 }
 
 .avatar {
@@ -48,7 +49,7 @@
     justify-content: center;
     font-size: 18px;
     font-weight: 300;
-    color: #fff;
+    color: $bg-color;
     text-transform:uppercase;
 }
 .employee-table tbody tr:last-child td {
@@ -60,31 +61,31 @@
 }
 
 .table-row:hover>td {
-    background-color: #e6f5ec;
+    background-color: $bg-color;
     cursor: pointer;
 }
 
 table i {
     cursor: pointer;
-    color:rgba(0, 0, 0, 0.705);
+    color:$text-color;
 }
 
 .table-row>td:last-child.active {
-    color: green;
+    color: $active-color;
     font-weight: bold;
 }
 
 .table-row>td:last-child.inactive {
-    color: red;
+    color: $danger-color;
     font-weight: bold;
 }
 
 .is-active {
-    color: green;
+    color: $active-color;
 }
 
 .is-not-active {
-    color: red;
+    color: $danger-color;
 }
 th , td{
     text-align: left;
@@ -104,8 +105,8 @@ white-space: nowrap;
 
 .more-button {
     padding: 10px 24px;
-    background-color: #00a86b;
-    color: white;
+    background-color: $primary-color;
+    color: $bg-color;
     border: none;
     border-radius: 10px;
     font-size: 14px;
@@ -114,8 +115,8 @@ white-space: nowrap;
 }
 
 .more-button:hover {
-    background-color: #025335;
-    color: white;
+    background-color: $primary-600;
+    color: $bg-color;
 }
 
 @media (max-width: 480px) {

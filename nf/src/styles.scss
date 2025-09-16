@@ -1,8 +1,10 @@
+@use './variables' as *;
+
 body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-color: #fff;
+    background-color: $bg-color;
     font-family: 'Segoe UI', sans-serif;
 }
 
@@ -17,4 +19,3 @@ main {
     width: 100%;
     padding: 20px;
 }
-

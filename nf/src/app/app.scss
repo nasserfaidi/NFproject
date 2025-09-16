@@ -1,3 +1,5 @@
+@use '_variables' as *;
+
 .content {
     flex:1;
 }
@@ -31,13 +33,13 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    color: #00a86b;
+    color: $primary-color;
     font-weight: 800px;
 }
 
 .profile:hover {
     text-decoration: underline;
-    color: #00a86b;
+    color: $primary-color;
     cursor: pointer;
     transform: translateY(-3px);
 }
@@ -45,17 +47,17 @@
 .user-icon {
     vertical-align: middle;
     font-size: 17px;
-    color: #00a86b;
+    color: $primary-color;
 }
 
 .lang {
     cursor: pointer;
     padding: 10px 10px;
     font-size: 12px;
-    background-color: white;
-    color: black;
+    background-color: $bg-color;
+    color: $text-color;
     border-radius: 7px;
-    border: 1px solid rgba(0, 0, 0, 0.258);
+    border: 1px solid $secondary-color;
 }
 
 
