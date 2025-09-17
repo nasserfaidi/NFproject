@@ -1,13 +1,66 @@
-<p class="setting-label">SETTINGS</p>
-<div>
-    <div>
-        <input type="text" placeholder="Nasser Faidi">
-        <input type="text" placeholder="faidinasser22@gmail.com">
-        <input type="text" placeholder="Mobile">
-        <input type="text" placeholder="Position">
+<p class="settings-label">SETTINGS</p>
+<p class="section-settings">Edit Profile</p>
+<div class="settiings-opt">
+
+    <div class="row-container">
 
 
+        <div class="set-container">
+            <div class="label-box">Name</div>
+            <div class="inner-content">
+                <input class="opt-decoration" type="text" [value]="'Nasser Faidi'">
+                <i class="fas fa-edit" title="edit"></i>
+            </div>
+        </div>
+        <div class="set-container">
+            <div class="label-box">Email</div>
+            <div class="inner-content">
+                <input class="opt-decoration" type="email" [value]="'faidinasser22@gmail.com'">
+                <i class="fas fa-edit" title="edit"></i>
+            </div>
+        </div>
+    </div>
 
+    <div class="row-container">
 
+        <div class="set-container">
+            <div class="label-box">Mobile</div>
+            <div class="inner-content">
+                <input class="opt-decoration" type="tel" [value]="'+962798165302'">
+                <i class="fas fa-edit" title="edit"></i>
+            </div>
+        </div>
+        <div class="set-container">
+            <div class="label-box">Position</div>
+            <div class="inner-content">
+                <input class="opt-decoration" type="text" [value]="'Fullstack Intern'" readonly>
+            </div>
+        </div>
     </div>
 </div>
+
+<p class="section-settings">Edit Privacy</p>
+    <div class="status-option">
+        <div class="status-label-container">
+            <p>Active status</p>
+        </div>
+        <div class="status-radio-container">
+            <input type="radio" id="show-status" name="active-status" value="show" checked>
+            <label for="show-status">Show</label>
+
+            <input type="radio" id="hide-status" name="active-status" value="hide">
+            <label for="hide-status">Hide</label>
+        </div>
+    </div>
+    <div class="status-option">
+        <div class="status-label-container">
+            <p>Show location</p>
+        </div>
+        <div class="status-radio-container">
+            <input type="radio" id="show-location" name="location-status" value="show" checked>
+            <label for="show-status">Show</label>
+
+            <input type="radio" id="hide-status" name="location-status" value="hide">
+            <label for="hide-status">Hide</label>
+        </div>
+    </div>
